@@ -1,0 +1,33 @@
+{
+  "name": "jasmine-example",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "jasmine-node test",
+    "test-coverage": "istanbul cover --include-all-sources jasmine-node --growl test"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "jasmine": "^3.1.0",
+    "lint-staged": "^7.0.0"
+  },
+  "dependencies": {
+    "husky": "^0.15.0-rc.13",
+    "istanbul": "^0.4.5",
+    "jasmine-node": "^1.14.5"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "npm run test-coverage && lint-staged"
+    }
+  },
+  "lint-staged": {
+    "./src/**/*.{js,jsx,css,scss,json,ts,vue}": [
+      "prettier --write",
+      "git add"
+    ]
+  }
+}

@@ -1,0 +1,44 @@
+{
+  "name": "jest-example",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest",
+    "test-coverage": "jest --coverage",
+    "updateSnapshots": "jest --updateSnapshot",
+    "test-watch": "jest --watch"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "jest": "^22.4.3",
+    "lint-staged": "^7.0.0"
+  },
+  "dependencies": {
+    "husky": "^0.15.0-rc.13"
+  },
+  "jest": {
+    "bail": true,
+    "verbose": true,
+    "collectCoverageFrom": [
+      "src/**/*.{js,jsx}",
+      "!**/node_modules/**",
+      "!**/coverage/**",
+      "!**/vendor/**"
+    ],
+    "coverageDirectory": "./coverage"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "jest --lastCommit && lint-staged"
+    }
+  },
+  "lint-staged": {
+    "./src/**/*.{js,jsx,css,scss,json,ts,vue}": [
+      "prettier --write",
+      "git add"
+    ]
+  }
+}
