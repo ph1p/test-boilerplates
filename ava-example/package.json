@@ -6,6 +6,7 @@
   "scripts": {
     "test": "cross-env NODE_ENV=test ava | tap-difflet",
     "test-coverage": "cross-env NODE_ENV=test nyc ava | tap-difflet",
+    "test-check-coverage": "npm run test-coverage && nyc check-coverage --lines 95 --functions 60 --branches 95",
     "test-watch": "cross-env NODE_ENV=test nyc ava --watch"
   },
   "keywords": [],
@@ -82,7 +83,7 @@
   },
   "husky": {
     "hooks": {
-      "pre-commit": "npm run test-coverage && lint-staged"
+      "pre-commit": "npm run test-check-coverage && lint-staged"
     }
   },
   "lint-staged": {
