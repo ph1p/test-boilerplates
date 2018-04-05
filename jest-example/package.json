@@ -7,7 +7,7 @@
     "test": "jest",
     "test-coverage": "cross-env NODE_ENV=test jest --coverage",
     "updateSnapshots": "cross-env NODE_ENV=test jest --updateSnapshot",
-    "test-watch": "cross-env NODE_ENV=test jest --watch"
+    "test-watch": "cross-env NODE_ENV=test jest --watchAll"
   },
   "keywords": [],
   "author": "",
