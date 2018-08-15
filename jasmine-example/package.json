@@ -5,21 +5,19 @@
   "main": "index.js",
   "scripts": {
     "test": "cross-env NODE_ENV=test jasmine-node test",
-    "test-coverage": "cross-env NODE_ENV=test nyc jasmine-node --growl test",
-    "test-check-coverage": "npm run test-coverage && nyc check-coverage --lines 95 --functions 60 --branches 95"
+    "test:coverage": "cross-env NODE_ENV=test nyc jasmine-node --growl test",
+    "test:check-coverage": "npm run test:coverage && nyc check-coverage --lines 95 --functions 60 --branches 95"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "devDependencies": {
-    "jasmine": "^3.1.0",
-    "lint-staged": "^7.0.0"
-  },
-  "dependencies": {
-    "cross-env": "^5.1.4",
-    "husky": "^0.15.0-rc.13",
-    "jasmine-node": "^1.14.5",
-    "nyc": "^11.6.0"
+    "cross-env": "^5.2.0",
+    "husky": "^0.14.3",
+    "jasmine": "^3.2.0",
+    "jasmine-node": "^1.15.0",
+    "lint-staged": "^7.2.2",
+    "nyc": "^12.0.2"
   },
   "husky": {
     "hooks": {

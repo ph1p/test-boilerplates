@@ -5,23 +5,21 @@
   "main": "index.js",
   "scripts": {
     "test": "cross-env NODE_ENV=test ava | tap-difflet",
-    "test-coverage": "cross-env NODE_ENV=test nyc ava | tap-difflet",
-    "test-check-coverage": "npm run test-coverage && nyc check-coverage --lines 95 --functions 60 --branches 95",
-    "test-watch": "cross-env NODE_ENV=test nyc ava --watch"
+    "test:coverage": "cross-env NODE_ENV=test nyc ava | tap-difflet",
+    "test:check-coverage": "npm run test:coverage && nyc check-coverage --lines 95 --functions 60 --branches 95",
+    "test:watch": "cross-env NODE_ENV=test ava --watch"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "devDependencies": {
-    "@babel/register": "^7.0.0-beta.42",
-    "ava": "^1.0.0-beta.3",
-    "lint-staged": "^7.0.0",
-    "nyc": "^11.6.0",
+    "@std/esm": "^0.26.0",
+    "ava": "^0.25.0",
+    "cross-env": "^5.2.0",
+    "husky": "^0.14.3",
+    "lint-staged": "^7.2.2",
+    "nyc": "^12.0.2",
     "tap-difflet": "^0.7.1"
-  },
-  "dependencies": {
-    "@std/esm": "^0.25.5",
-    "cross-env": "^5.1.4"
   },
   "ava": {
     "files": [
@@ -42,15 +40,7 @@
     "failWithoutAssertions": false,
     "tap": true,
     "verbose": true,
-    "compileEnhancements": true,
-    "require": [
-      "@babel/register"
-    ],
-    "babel": {
-      "testOptions": {
-        "babelrc": false
-      }
-    }
+    "compileEnhancements": true
   },
   "nyc": {
     "check-coverage": true,
