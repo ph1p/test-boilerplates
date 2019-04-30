@@ -1,4 +1,4 @@
-# Test boilerplates
+# Test boilerplates [![Build Status](https://travis-ci.org/ph1p/test-boilerplates.svg?branch=master)](https://travis-ci.org/ph1p/test-boilerplates)
 
 This repository contains examples of some of the most popular JavaScript test frameworks.
 I am constantly working on new examples and improvements.
