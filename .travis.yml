@@ -1,0 +1,15 @@
+dist: trusty
+notifications:
+  email: false
+
+cache:
+  yarn: true
+  directories:
+    - node_modules
+
+language: node_js
+
+node_js:
+  - "9"
+
+script: ./scripts/run-tests.sh
