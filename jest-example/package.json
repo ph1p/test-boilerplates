@@ -14,17 +14,17 @@
   "license": "ISC",
   "devDependencies": {
     "cross-env": "^5.2.0",
-    "husky": "^2.1.0",
-    "jest": "^24.7.1",
-    "lint-staged": "^8.1.5"
+    "husky": "^3.0.4",
+    "jest": "^24.9.0",
+    "lint-staged": "^9.2.5"
   },
   "jest": {
     "coverageThreshold": {
       "global": {
         "branches": 95,
-        "functions": 60,
+        "functions": 50,
         "lines": 75,
-        "statements": -10
+        "statements": 75
       }
     },
     "bail": true,

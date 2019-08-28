@@ -6,7 +6,7 @@ function sub(a = 0, b = 0) {
   return parseInt(a - b);
 }
 
-function testNotImplmented(msg) {
+function testNotImplemented(msg) {
   return msg;
 }
 

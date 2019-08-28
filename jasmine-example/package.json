@@ -6,22 +6,22 @@
   "scripts": {
     "test": "cross-env NODE_ENV=test jasmine-node test",
     "test:coverage": "cross-env NODE_ENV=test nyc jasmine-node --growl test",
-    "test:check-coverage": "npm run test:coverage && nyc check-coverage --lines 95 --functions 60 --branches 95"
+    "test:check-coverage": "npm run test:coverage && nyc check-coverage --lines 95 --functions 50 --branches 95"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "devDependencies": {
     "cross-env": "^5.2.0",
-    "husky": "^2.1.0",
+    "husky": "^3.0.4",
     "jasmine": "^3.4.0",
-    "jasmine-node": "^2.0.1",
-    "lint-staged": "^8.1.5",
-    "nyc": "^14.0.0"
+    "jasmine-node": "^3.0.0",
+    "lint-staged": "^9.2.5",
+    "nyc": "^14.1.1"
   },
   "husky": {
     "hooks": {
-      "pre-commit": "npm run test-check-coverage && lint-staged"
+      "pre-commit": "npm run test:check-coverage && lint-staged"
     }
   },
   "lint-staged": {

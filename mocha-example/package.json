@@ -7,7 +7,7 @@
     "test": "cross-env NODE_ENV=test mocha",
     "test:watch": "cross-env NODE_ENV=test mocha --watch",
     "test:coverage": "cross-env NODE_ENV=test nyc --reporter=lcov --reporter=text-summary mocha",
-    "test:check-coverage": "npm run test:coverage && nyc check-coverage --lines 95 --functions 60 --branches 95"
+    "test:check-coverage": "npm run test:coverage && nyc check-coverage --lines 75 --functions 50 --branches 95"
   },
   "keywords": [],
   "author": "",
@@ -15,14 +15,14 @@
   "devDependencies": {
     "chai": "^4.2.0",
     "cross-env": "^5.2.0",
-    "husky": "^2.1.0",
-    "lint-staged": "^8.1.5",
-    "mocha": "^6.1.4",
-    "nyc": "^14.0.0"
+    "husky": "^3.0.4",
+    "lint-staged": "^9.2.5",
+    "mocha": "^6.2.0",
+    "nyc": "^14.1.1"
   },
   "husky": {
     "hooks": {
-      "pre-commit": "npm run test-check-coverage && lint-staged"
+      "pre-commit": "npm run test:check-coverage && lint-staged"
     }
   },
   "lint-staged": {
