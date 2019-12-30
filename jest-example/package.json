@@ -13,10 +13,10 @@
   "author": "",
   "license": "ISC",
   "devDependencies": {
-    "cross-env": "^5.2.0",
-    "husky": "^3.0.4",
+    "cross-env": "^6.0.3",
+    "husky": "^3.1.0",
     "jest": "^24.9.0",
-    "lint-staged": "^9.2.5"
+    "lint-staged": "^9.5.0"
   },
   "jest": {
     "coverageThreshold": {
