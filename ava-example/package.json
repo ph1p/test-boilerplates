@@ -13,21 +13,23 @@
   "author": "",
   "license": "ISC",
   "devDependencies": {
+    "@ava/babel": "^1.0.1",
     "@std/esm": "^0.26.0",
-    "ava": "^2.4.0",
-    "cross-env": "^6.0.3",
-    "husky": "^3.1.0",
-    "lint-staged": "^9.5.0",
+    "ava": "^3.5.0",
+    "cross-env": "^7.0.2",
+    "husky": "^4.2.3",
+    "lint-staged": "^10.0.8",
     "nyc": "^15.0.0"
   },
   "ava": {
+    "babel": true,
     "files": [
       "test/**/*.{spec,test}.js",
       "!**/node_modules/**",
       "!**/coverage/**",
       "!**/vendor/**"
     ],
-    "sources": [
+    "ignoredByWatcher": [
       "**/*.{js,jsx}",
       "!dist/**/*",
       "!**/node_modules/**",
@@ -38,8 +40,7 @@
     "failFast": true,
     "failWithoutAssertions": false,
     "tap": true,
-    "verbose": true,
-    "compileEnhancements": true
+    "verbose": true
   },
   "nyc": {
     "check-coverage": true,
