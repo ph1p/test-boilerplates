@@ -2,11 +2,6 @@ dist: trusty
 notifications:
   email: false
 
-cache:
-  yarn: true
-  directories:
-    - node_modules
-
 language: node_js
 
 node_js:
