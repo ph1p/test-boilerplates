@@ -15,11 +15,11 @@
   "devDependencies": {
     "@ava/babel": "^1.0.1",
     "@std/esm": "^0.26.0",
-    "ava": "^3.5.0",
+    "ava": "^3.8.1",
     "cross-env": "^7.0.2",
-    "husky": "^4.2.3",
-    "lint-staged": "^10.0.8",
-    "nyc": "^15.0.0"
+    "husky": "^4.2.5",
+    "lint-staged": "^10.2.0",
+    "nyc": "^15.0.1"
   },
   "ava": {
     "babel": true,
