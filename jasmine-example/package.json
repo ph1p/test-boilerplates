@@ -16,8 +16,8 @@
     "husky": "^4.2.5",
     "jasmine": "^3.5.0",
     "jasmine-node": "^3.0.0",
-    "lint-staged": "^10.2.0",
-    "nyc": "^15.0.1"
+    "lint-staged": "^10.2.11",
+    "nyc": "^15.1.0"
   },
   "husky": {
     "hooks": {
