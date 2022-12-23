@@ -1,5 +1,5 @@
 import test from "ava";
-import { sum, sub } from "../src";
+import { sum, sub } from "../src/index.js";
 
 test.serial("typeof sum equal function", t => {
   t.is(typeof sum, "function");
